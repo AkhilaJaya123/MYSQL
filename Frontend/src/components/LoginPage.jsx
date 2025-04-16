@@ -7,8 +7,6 @@ function LoginPage() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const apiUrl = import.meta.env.VITE_API_URL;
-
   const handleLogin = async () => {
     if (!user.username || !user.password || !user.role) {
       setError("All fields are required");
@@ -16,8 +14,7 @@ function LoginPage() {
     }
 
     try {
-      const response = await axios.post(`${apiUrl}/api/login`, user);
-
+      const response = await axios.post("http://localhost:8000/api/login", user);
       if (response.data.role === "faculty") {
         navigate("/faculty");
       } else if (response.data.role === "student") {
