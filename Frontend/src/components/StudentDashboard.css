@@ -1,0 +1,94 @@
+/* StudentDashboard.css */
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color:lightgrey;
+    color: #333;
+    text-align: center;
+  }
+  
+  .dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:lightpink;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .dashboard-header {
+    text-align: center;
+    padding: 10px 0;
+    background-color:black;
+    color: white;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  h2 {
+    color:black;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .marks-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .mark-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+  }
+  
+  .mark-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .subject {
+    font-weight: bold;
+  }
+  
+  .marks {
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  
+    .mark-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .marks {
+      text-align: left;
+    }
+  }
+  
